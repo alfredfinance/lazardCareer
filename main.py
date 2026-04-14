@@ -76,6 +76,9 @@ driver.quit()
 df_urls = pd.DataFrame(job_urls, columns=["url", "division", "location"])
 print(f"Collected {len(df_urls)} job URLs")
 
+job_urls = df_urls["url"].tolist()
+
+
 #------------------------CHECK DUPLICATES URL DANS BIGQUERY--------------------------------------------------
 
 # Load JSON from GitHub secret
